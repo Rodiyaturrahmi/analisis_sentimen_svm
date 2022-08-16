@@ -10,6 +10,7 @@ Original file is located at
 import pandas as pd
 import re
 import nltk
+import Sastrawi
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -24,7 +25,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 
-!pip install Sastrawi
+# pip install Sastrawi
 
 """Dataset"""
 
