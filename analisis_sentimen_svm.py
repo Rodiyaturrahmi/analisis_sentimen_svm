@@ -29,16 +29,18 @@ from sklearn.metrics import classification_report
 
 """Dataset"""
 
-from google.colab import drive
-drive.mount('/content/drive')
-
-dataset = 'drive/MyDrive/sentimen/dataset_tweet_sentimen.csv'
-data = pd.read_csv(dataset)
+# from google.colab import drive
+# drive.mount('/content/drive')
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+    data = pd.read_csv(uploaded_file)
+# dataset = 'drive/MyDrive/sentimen/dataset_tweet_sentimen.csv'
+# data = pd.read_csv(dataset)
 data
 
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
+# nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('wordnet')
 
 data['tweet'][1]
 
